@@ -500,6 +500,11 @@ do
     --   },
     -- },
     -- pickers = {}
+    --
+    --require('telescope').setup {
+    defaults = {
+      file_ignore_patterns = { 'node_modules', '%.git/' },
+    },
     extensions = {
       ['ui-select'] = { require('telescope.themes').get_dropdown() },
     },
@@ -775,7 +780,7 @@ do
     -- You can add other tools here that you want Mason to install
     'biome',
     'json-lsp',
-    'markdownlint'
+    'markdownlint',
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
